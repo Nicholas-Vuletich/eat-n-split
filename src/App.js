@@ -65,7 +65,13 @@ const [selectedFriend, setSelectedFriend] = useState(null);
     </Button>
     </div>
 
-    {selectedFriend && <FormSplitBill selectedFriend={selectedFriend} onSplitBill={handleSplitBill} />}
+    {selectedFriend && ( 
+      <FormSplitBill 
+      selectedFriend={selectedFriend} 
+      onSplitBill={handleSplitBill}
+      key={selectedFriend.id} 
+      />
+    )}
   </div>
 } 
 
